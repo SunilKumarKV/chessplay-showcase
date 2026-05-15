@@ -25,7 +25,7 @@ This repository intentionally excludes private production code: backend APIs, au
 
 ## Live Demo
 
-getchessplay.vercel.app
+https://getchessplay.vercel.app
 
 ## Screenshots
 
