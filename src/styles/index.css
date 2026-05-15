@@ -1,0 +1,273 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap');
+@import "tailwindcss";
+
+/* ── Custom slider styling */
+.slider::-webkit-slider-thumb {
+  appearance: none;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background: #81b64c;
+  cursor: pointer;
+  border: 2px solid #0e0e0e;
+  box-shadow: 0 0 0 2px rgba(129, 182, 76, 0.3);
+}
+
+.slider::-webkit-slider-thumb:hover {
+  background: #6ba43d;
+  box-shadow: 0 0 0 4px rgba(129, 182, 76, 0.3);
+}
+
+.slider::-moz-range-thumb {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background: #81b64c;
+  cursor: pointer;
+  border: 2px solid #0e0e0e;
+  box-shadow: 0 0 0 2px rgba(129, 182, 76, 0.3);
+}
+
+.slider::-moz-range-thumb:hover {
+  background: #6ba43d;
+  box-shadow: 0 0 0 4px rgba(129, 182, 76, 0.3);
+}
+
+/* ── Piece transition */
+.piece-enter {
+  animation: pieceIn 0.15s ease-out;
+}
+@keyframes pieceIn {
+  from {
+    transform: scale(0.7);
+    opacity: 0.5;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* ── Board square hover */
+.board-square:hover {
+  filter: brightness(1.08);
+}
+
+/* Premium chess board effects */
+.premium-chess-board::before,
+.premium-chess-board::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 25;
+}
+
+.premium-chess-board::before {
+  background:
+    radial-gradient(circle at 18% 12%, color-mix(in srgb, var(--board-glow) 52%, transparent), transparent 28%),
+    linear-gradient(135deg, rgba(255, 255, 255, 0.16), transparent 34%, rgba(0, 0, 0, 0.16));
+  mix-blend-mode: soft-light;
+  opacity: 0.74;
+}
+
+.premium-chess-board::after {
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 255, 255, 0.12),
+    inset 0 0 42px rgba(0, 0, 0, 0.24);
+}
+
+.premium-board-square {
+  isolation: isolate;
+}
+
+.premium-board-square::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 6;
+  pointer-events: none;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.2), transparent 62%);
+  opacity: 0;
+  transform: scale(0.82);
+  transition:
+    opacity 0.18s ease,
+    transform 0.18s ease;
+}
+
+.premium-board-square:hover::after {
+  opacity: 0.56;
+  transform: scale(1);
+}
+
+.premium-piece {
+  cursor: grab;
+  filter: drop-shadow(0 8px 12px rgba(0, 0, 0, 0.28));
+  will-change: transform, filter;
+}
+
+.premium-piece:active {
+  cursor: grabbing;
+}
+
+.board-coordinate {
+  opacity: 0.48;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.28);
+  transition: opacity 0.22s ease;
+}
+
+.premium-chess-board:hover .board-coordinate {
+  opacity: 0.95;
+}
+
+.premium-check-warning {
+  background:
+    radial-gradient(circle, var(--board-check) 0 38%, transparent 64%),
+    linear-gradient(135deg, rgba(255, 255, 255, 0.14), transparent);
+  animation: boardCheckPulse 0.95s ease-in-out infinite;
+}
+
+.premium-capture-burst span {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 9px;
+  height: 9px;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--board-glow) 75%, white);
+  box-shadow: 0 0 18px var(--board-glow);
+  transform: translate(-50%, -50%);
+  animation: captureBurst 0.46s ease-out forwards;
+}
+
+.premium-capture-burst span:nth-child(2) {
+  animation-delay: 0.03s;
+  --burst-x: -32px;
+  --burst-y: 18px;
+}
+
+.premium-capture-burst span:nth-child(3) {
+  animation-delay: 0.05s;
+  --burst-x: 28px;
+  --burst-y: 24px;
+}
+
+.premium-capture-burst span:nth-child(4) {
+  animation-delay: 0.08s;
+  --burst-x: -14px;
+  --burst-y: -34px;
+}
+
+.premium-capture-burst span:nth-child(1) {
+  --burst-x: 34px;
+  --burst-y: -18px;
+}
+
+@keyframes boardCheckPulse {
+  0%,
+  100% {
+    opacity: 0.55;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.95;
+    transform: scale(1.04);
+  }
+}
+
+@keyframes captureBurst {
+  from {
+    opacity: 0.95;
+    transform: translate(-50%, -50%) scale(0.5);
+  }
+  to {
+    opacity: 0;
+    transform: translate(calc(-50% + var(--burst-x)), calc(-50% + var(--burst-y))) scale(1.8);
+  }
+}
+
+/* ── Player turn indicator pulse */
+@keyframes playerPulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+/* ── Custom font classes */
+.font-montserrat {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.font-inter {
+  font-family: 'Inter', sans-serif;
+}
+
+.font-jetbrains {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* ── Global styles for the new color scheme */
+body {
+  background-color: #0e0e0e;
+  color: #e0e0e0;
+  font-family: var(--app-font-family, 'Inter', sans-serif);
+  font-size: var(--app-font-size, 16px);
+}
+
+/* ── Smooth transitions for theme changes */
+* {
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+/* Light-theme contrast guard for legacy dark Tailwind utility classes.
+   Keeps text readable on pages/components that still use hardcoded gray/white classes. */
+html[data-theme="light"] .text-white,
+html[data-theme="newspaper"] .text-white {
+  color: var(--color-text-primary) !important;
+}
+
+html[data-theme="light"] .text-gray-100,
+html[data-theme="light"] .text-gray-200,
+html[data-theme="light"] .text-gray-300,
+html[data-theme="light"] .text-gray-400,
+html[data-theme="newspaper"] .text-gray-100,
+html[data-theme="newspaper"] .text-gray-200,
+html[data-theme="newspaper"] .text-gray-300,
+html[data-theme="newspaper"] .text-gray-400 {
+  color: var(--color-text-secondary) !important;
+}
+
+html[data-theme="light"] .bg-gray-900,
+html[data-theme="newspaper"] .bg-gray-900 {
+  background-color: var(--color-bg-primary) !important;
+}
+
+html[data-theme="light"] .bg-gray-800,
+html[data-theme="light"] .bg-gray-700,
+html[data-theme="light"] .bg-gray-700\/60,
+html[data-theme="newspaper"] .bg-gray-800,
+html[data-theme="newspaper"] .bg-gray-700,
+html[data-theme="newspaper"] .bg-gray-700\/60 {
+  background-color: var(--color-bg-secondary) !important;
+}
+
+html[data-theme="light"] .border-gray-700,
+html[data-theme="light"] .border-gray-600,
+html[data-theme="newspaper"] .border-gray-700,
+html[data-theme="newspaper"] .border-gray-600 {
+  border-color: var(--color-border-primary) !important;
+}
+
+@keyframes floatPiece {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-22px) rotate(8deg); }
+}
+
+@keyframes floatPiece {
+  0%, 100% { transform: translate3d(0, 0, 0) rotate(0deg); }
+  50% { transform: translate3d(0, -22px, 0) rotate(5deg); }
+}
