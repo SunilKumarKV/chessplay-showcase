@@ -1,53 +1,143 @@
-# ChessPlay Showcase
+# ♟️ ChessPlay
 
-ChessPlay Showcase is the safe public frontend demo for ChessPlay. It highlights the React chess interface, local play, Stockfish integration, move history, board themes, sounds, and responsive gameplay UI.
+## Production-Ready Real-Time Chess Platform
 
-This repository intentionally excludes private production code: backend APIs, authentication, admin tooling, payment logic, referral systems, database models, production Socket.IO logic, deployment secrets, and real environment values.
+ChessPlay is a modern full-stack chess platform focused on real-time gameplay, AI challenges, premium features, and a polished user experience.
 
-## Features
+![ChessPlay Banner](./screenshots/banner.png)
 
-- Local chess against Stockfish
-- Same-device player-vs-player mode
-- Move history and captured-piece panels
-- Board theme and sound settings
-- Responsive React/Vite frontend
-- Bundled Stockfish WebAssembly assets
+---
 
-## Tech Stack
+## 🚀 Live Demo
 
-- React
-- JavaScript
+🔗 https://chessplay1.vercel.app
+
+---
+
+## ✨ Features
+
+### Core Gameplay
+- Real-time multiplayer chess
+- Play vs AI (Stockfish)
+- Move validation
+- Game timers
+- Leaderboard
+- Game history
+- Friends & notifications
+
+### User Experience
+- Responsive UI
+- Modern dashboard
+- Premium memberships
+- Referral rewards
+- Profile customization
+- Smooth animations
+
+### Product Features
+- Authentication
+- Real-time Socket.IO communication
+- Production deployment
+- Scalable architecture
+- Mobile-friendly UI
+
+---
+
+## 🛠 Tech Stack
+
+### Frontend
+- React.js
 - Vite
 - Tailwind CSS
-- Redux Toolkit
-- chess.js
-- Stockfish WebAssembly
+- JavaScript / TypeScript migration
 
-## Live Demo
+### Backend
+- Node.js
+- Express.js
+- Socket.IO
 
-https://getchessplay.vercel.app
+### Database
+- MongoDB
+- PostgreSQL (migration in progress)
+- Prisma
 
-## Screenshots
+### Deployment
+- Vercel
+- Render
+- GitHub Actions
 
-Place public screenshots in `screenshots/` and reference them here.
+---
 
-## Local Setup
+## 📸 Screenshots
 
-```bash
-npm install
-npm run dev
+Add screenshots:
+
+```txt
+/screenshots
 ```
 
-## What Is Not Included
+Examples:
 
-- Backend source code
-- Authentication/session logic
-- Admin dashboard
-- Payment, premium, and referral logic
-- Database schemas and data access
-- Production socket server logic
-- Production API keys or secrets
+```txt
+home.png
+dashboard.png
+multiplayer.png
+premium.png
+profile.png
+```
 
-## Security
+Then show:
 
-This showcase is designed to be public-safe. If you find a sensitive file, credential, or private implementation detail, please report it privately.
+```md
+![Dashboard](./screenshots/dashboard.png)
+![Multiplayer](./screenshots/multiplayer.png)
+```
+
+---
+
+## 🏗 Architecture Overview
+
+```txt
+Frontend (React)
+   ↓
+REST API + Socket.IO
+   ↓
+Node.js + Express
+   ↓
+MongoDB / PostgreSQL
+```
+
+---
+
+## 🔒 Security
+
+This public repository contains showcase/documentation only.
+
+Private production backend logic, secrets, payment infrastructure, and sensitive implementation details are not exposed.
+
+---
+
+## 🚀 Roadmap
+
+- [ ] Tournament mode
+- [ ] Enhanced AI difficulty modes
+- [ ] Mobile app
+- [ ] Advanced analytics
+- [ ] Social gameplay features
+
+---
+
+## 👨‍💻 Developer
+
+Sunil Kumar K V
+
+LinkedIn:
+https://www.linkedin.com/in/sunilkumarkv44/
+
+Portfolio:
+https://sunilcraft.vercel.app
+
+---
+
+## License
+
+MIT
