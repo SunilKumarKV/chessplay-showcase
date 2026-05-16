@@ -4,7 +4,7 @@
 
 ChessPlay is a modern full-stack chess platform focused on real-time gameplay, AI challenges, premium features, and a polished user experience.
 
-![ChessPlay Banner](./screenshots/banner.png)
+![ChessPlay Banner](./screenshots/dashboard.png)
 
 ---
 
@@ -69,28 +69,11 @@ ChessPlay is a modern full-stack chess platform focused on real-time gameplay, A
 
 ## 📸 Screenshots
 
-Add screenshots:
-
-```txt
-/screenshots
-```
-
-Examples:
-
-```txt
-home.png
-dashboard.png
-multiplayer.png
-premium.png
-profile.png
-```
-
-Then show:
-
-```md
+![Home](./screenshots/home.png)
 ![Dashboard](./screenshots/dashboard.png)
+![Play vs AI](./screenshots/play-vs-ai.png)
 ![Multiplayer](./screenshots/multiplayer.png)
-```
+![Premium](./screenshots/premium.png)
 
 ---
 
