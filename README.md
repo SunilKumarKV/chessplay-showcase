@@ -1,73 +1,81 @@
-# ♟️ ChessPlay
+# ChessPlay
 
-## Production-Ready Real-Time Chess Platform
+Production-ready real-time chess platform showcase.
 
-ChessPlay is a modern full-stack chess platform focused on real-time gameplay, AI challenges, premium features, and a polished user experience.
+ChessPlay is a full-stack chess product focused on real-time multiplayer gameplay, AI-powered practice, authenticated dashboards, leaderboards, social features, and production deployment.
 
-![ChessPlay Banner](./screenshots/dashboard.png)
+![ChessPlay Dashboard](./screenshots/dashboard.png)
 
----
+## Live Demo
 
-## 🚀 Live Demo
+- Live app: https://getchessplay.vercel.app/
+- Developer portfolio: https://sunilcraft.vercel.app
 
-🔗 https://chessplay1.vercel.app
+## Product Overview
 
----
+ChessPlay is designed as a modern chess platform where users can play online, challenge AI, track progress, manage profiles, and experience a polished game dashboard.
 
-## ✨ Features
+This public repository is used as a professional showcase for the product. Sensitive production code, secrets, infrastructure configuration, and private backend implementation details are not exposed here.
 
-### Core Gameplay
+## Key Features
+
+### Gameplay
+
 - Real-time multiplayer chess
-- Play vs AI (Stockfish)
-- Move validation
+- Play vs AI using Stockfish
+- Legal move validation
 - Game timers
-- Leaderboard
 - Game history
-- Friends & notifications
+- Leaderboard
+- Resign and game-end flows
 
-### User Experience
-- Responsive UI
-- Modern dashboard
-- Premium memberships
-- Referral rewards
-- Profile customization
-- Smooth animations
+### User Platform
 
-### Product Features
 - Authentication
-- Real-time Socket.IO communication
-- Production deployment
-- Scalable architecture
-- Mobile-friendly UI
+- User dashboard
+- Profile management
+- Friends system
+- Notifications
+- Referral rewards
+- Premium membership planning
 
----
+### Product & Engineering
 
-## 🛠 Tech Stack
+- Responsive web UI
+- Socket-based real-time communication
+- Production deployment workflow
+- Scalable architecture planning
+- PostgreSQL/Prisma migration planning
+- Mobile app roadmap
+
+## Tech Stack
 
 ### Frontend
+
 - React.js
 - Vite
 - Tailwind CSS
-- JavaScript / TypeScript migration
+- JavaScript / TypeScript migration path
 
 ### Backend
+
 - Node.js
 - Express.js
 - Socket.IO
 
 ### Database
+
 - MongoDB
-- PostgreSQL (migration in progress)
-- Prisma
+- PostgreSQL migration roadmap
+- Prisma planning
 
 ### Deployment
+
 - Vercel
-- Render
-- GitHub Actions
+- Render / Railway planning
+- GitHub release workflow
 
----
-
-## 📸 Screenshots
+## Screenshots
 
 ![Home](./screenshots/home.png)
 ![Dashboard](./screenshots/dashboard.png)
@@ -75,51 +83,51 @@ ChessPlay is a modern full-stack chess platform focused on real-time gameplay, A
 ![Multiplayer](./screenshots/multiplayer.png)
 ![Premium](./screenshots/premium.png)
 
----
-
-## 🏗 Architecture Overview
+## Architecture Overview
 
 ```txt
-Frontend (React)
+React Frontend
    ↓
 REST API + Socket.IO
    ↓
-Node.js + Express
+Node.js + Express Backend
    ↓
-MongoDB / PostgreSQL
+Database Layer
+   ↓
+MongoDB / PostgreSQL Migration Path
 ```
 
----
+## Repository Purpose
 
-## 🔒 Security
+This repository is intentionally public and focuses on:
 
-This public repository contains showcase/documentation only.
+- product presentation
+- screenshots
+- feature documentation
+- roadmap documentation
+- recruiter/client showcase
+- launch and marketing visibility
 
-Private production backend logic, secrets, payment infrastructure, and sensitive implementation details are not exposed.
+Private production implementation details remain protected in the private production repository.
 
----
-
-## 🚀 Roadmap
+## Roadmap
 
 - [ ] Tournament mode
-- [ ] Enhanced AI difficulty modes
-- [ ] Mobile app
-- [ ] Advanced analytics
-- [ ] Social gameplay features
+- [ ] Enhanced AI difficulty levels
+- [ ] Puzzle/training mode
+- [ ] Mobile app release
+- [ ] Advanced player analytics
+- [ ] Premium subscriptions
+- [ ] Better social gameplay features
+- [ ] PostgreSQL + Prisma production migration
 
----
-
-## 👨‍💻 Developer
+## Developer
 
 Sunil Kumar K V
 
-LinkedIn:
-https://www.linkedin.com/in/sunilkumarkv44/
-
-Portfolio:
-https://sunilcraft.vercel.app
-
----
+- Portfolio: https://sunilcraft.vercel.app
+- LinkedIn: https://www.linkedin.com/in/sunilkumarkv44/
+- GitHub: https://github.com/SunilKumarKV
 
 ## License
 
