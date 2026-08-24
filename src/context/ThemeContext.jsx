@@ -8,8 +8,8 @@ const THEMES = {
     primary: "#81b64c",
     primaryDark: "#6a9a3d",
     primaryLight: "#9ecf5e",
-
-    // Background colors
+    
+    // bg-color
     bg: {
       primary: "#0e0e0e",
       secondary: "#1a1a1a",
@@ -18,7 +18,7 @@ const THEMES = {
       overlay: "#111827",
     },
 
-    // Text colors
+    // txt colors
     text: {
       primary: "#e0e0e0",
       secondary: "#a0a0a0",
